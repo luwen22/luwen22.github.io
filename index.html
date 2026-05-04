@@ -7,6 +7,10 @@
     <style>
         *{margin:0;padding:0;box-sizing:border-box}
         body{font-family:'PingFang SC','Hiragino Sans GB','Noto Serif SC','Microsoft YaHei',serif;background:radial-gradient(circle at 20% 15%,rgba(183,198,255,.3),transparent 40%),radial-gradient(circle at 80% 8%,rgba(255,199,213,.25),transparent 38%),linear-gradient(165deg,#fffdfb 0%,#f8f6ff 45%,#f4f8ff 100%);min-height:100vh;min-height:100dvh;overflow:hidden;-webkit-tap-highlight-color:transparent;-webkit-font-smoothing:antialiased;user-select:none;-webkit-user-select:none;display:flex;align-items:center;justify-content:center;position:relative;padding:16px 20px 24px}
+        body::before,body::after{content:'';position:fixed;z-index:0;pointer-events:none;filter:blur(28px);opacity:.7}
+        body::before{width:180px;height:180px;border-radius:50%;left:-40px;top:12%;background:radial-gradient(circle,#9faeff 0%,rgba(159,174,255,0) 70%);animation:orbFloat 8s ease-in-out infinite}
+        body::after{width:160px;height:160px;border-radius:50%;right:-30px;bottom:12%;background:radial-gradient(circle,#ffb9cf 0%,rgba(255,185,207,0) 70%);animation:orbFloat 10s ease-in-out infinite reverse}
+        @keyframes orbFloat{0%,100%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(0,-12px,0) scale(1.08)}}
         #particleCanvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none}
         .bg-lens-flare{position:fixed;top:22%;left:50%;transform:translate(-50%,-50%);width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(180,200,240,.1) 0%,rgba(200,180,220,.05) 40%,transparent 70%);pointer-events:none;z-index:0;animation:flareBreathe 5s ease-in-out infinite}
         @keyframes flareBreathe{0%,100%{transform:translate(-50%,-50%) scale(1);opacity:.7}50%{transform:translate(-50%,-50%) scale(1.15);opacity:1}}
@@ -39,7 +43,10 @@
         .film-frame:nth-child(5){background:linear-gradient(135deg,#D4A5FF,#FFB7B2)}.film-frame:nth-child(6){background:linear-gradient(135deg,#A8D8C8,#6CB4EE)}
         .film-frame:nth-child(7){background:linear-gradient(135deg,#FF6B6B,#FFCD56)}.film-frame:nth-child(8){background:linear-gradient(135deg,#81D4FA,#CE93D8)}
 
-        .fullscreen-content{width:100%;max-width:400px;text-align:center;position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:10px;background:rgba(255,255,255,.55);border:1px solid rgba(215,220,245,.7);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-radius:26px;padding:24px 18px 18px;box-shadow:0 20px 50px rgba(118,122,190,.16)}
+        .fullscreen-content{width:100%;max-width:400px;text-align:center;position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:10px;background:rgba(255,255,255,.52);border:1px solid rgba(215,220,245,.8);backdrop-filter:blur(16px) saturate(118%);-webkit-backdrop-filter:blur(16px) saturate(118%);border-radius:26px;padding:24px 18px 18px;box-shadow:0 20px 50px rgba(118,122,190,.16);overflow:hidden}
+        .fullscreen-content::before{content:'';position:absolute;inset:0;background:linear-gradient(130deg,rgba(255,255,255,.45),rgba(255,255,255,0) 42%,rgba(255,255,255,.22) 70%,rgba(255,255,255,0));pointer-events:none}
+        .fullscreen-content::after{content:'';position:absolute;top:0;left:-45%;width:58%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.45),transparent);transform:skewX(-18deg);animation:shellSweep 6s ease-in-out infinite}
+        @keyframes shellSweep{0%,70%,100%{left:-55%}35%{left:120%}}
         .logo-group{display:flex;flex-direction:column;align-items:center;gap:6px}
         .input-group-area{width:90%;display:flex;flex-direction:column;align-items:center;gap:10px;margin-top:4px}
         .camera-logo-wrap{position:relative;display:flex;align-items:center;justify-content:center}
@@ -81,6 +88,11 @@
         @keyframes btnLightSweep{0%{left:-100%}40%{left:120%}100%{left:120%}}
         .cover-footer{font-size:10px;color:#808098;letter-spacing:.5px;opacity:0;animation:simpleFade .6s 5.8s ease forwards}
         @keyframes simpleFade{from{opacity:0}to{opacity:1}}
+        @media (max-width:480px){
+            .fullscreen-content{padding:22px 14px 16px;border-radius:22px}
+            .cover-title{font-size:21px;letter-spacing:1.5px}
+            .cover-btn{box-shadow:0 14px 32px rgba(111,125,255,.34)}
+        }
 
         .app-stage{position:fixed;top:0;left:0;width:100%;height:100%;height:100dvh;display:none;z-index:1}
         .app-stage.active{display:flex;flex-direction:column;align-items:center;justify-content:center}
@@ -118,10 +130,12 @@
 
         .swipe-wrapper{flex:1;width:100%;overflow:hidden;position:relative;touch-action:pan-y}
         .swipe-track{display:flex;height:100%;will-change:transform;transition:transform .5s cubic-bezier(.22,.61,.36,1)}
-        .swipe-page{min-width:100%;height:100%;overflow-y:auto;overflow-x:hidden;padding:6px 20px 36px;display:flex;flex-direction:column;align-items:center;-webkit-overflow-scrolling:touch}
+        .swipe-page{min-width:100%;height:100%;overflow-y:auto;overflow-x:hidden;padding:6px 20px 36px;display:flex;flex-direction:column;align-items:center;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+        .swipe-page::-webkit-scrollbar{display:none}
         .swipe-page-inner{width:100%;max-width:400px;display:flex;flex-direction:column;gap:14px;padding-bottom:16px}
 
-        .g-card{background:rgba(255,255,255,.7);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-radius:20px;border:1px solid rgba(206,213,245,.45);box-shadow:0 10px 28px rgba(100,80,140,.09);padding:20px 16px;animation:cardFloat 4s ease-in-out infinite}
+        .g-card{background:rgba(255,255,255,.7);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-radius:20px;border:1px solid rgba(206,213,245,.45);box-shadow:0 10px 28px rgba(100,80,140,.09);padding:20px 16px;animation:cardFloat 4s ease-in-out infinite;position:relative;overflow:hidden}
+        .g-card::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 12% 18%,rgba(123,140,255,.13),transparent 45%),radial-gradient(circle at 88% 86%,rgba(255,170,200,.12),transparent 45%);pointer-events:none}
         @keyframes cardFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
         .tag-card{background:linear-gradient(135deg,rgba(240,238,250,.8),rgba(245,240,252,.7));backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-radius:20px;border:1px solid rgba(200,190,220,.4);box-shadow:0 4px 20px rgba(100,80,140,.06);padding:24px 18px;text-align:center;position:relative;overflow:hidden;animation:cardFloat 5s ease-in-out infinite}
         .role-icon-big{font-size:48px;animation:roleBounceIn .6s cubic-bezier(.34,1.56,.64,1) forwards;opacity:0}
