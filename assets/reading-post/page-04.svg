@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1242" height="2208" viewBox="0 0 1242 2208">
+  <defs>
+    <filter id="paperShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="14" stdDeviation="22" flood-color="#d9d0c4" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect width="100%" height="100%" fill="#f6f0e8"/>
+  <rect x="54" y="54" width="1134" height="2100" rx="46" fill="#fffdf8" filter="url(#paperShadow)"/>
+  <rect x="82" y="82" width="1078" height="2044" rx="34" fill="none" stroke="#eadfce" stroke-width="2"/>
+  <style>
+    .body { font-family: 'Noto Serif CJK SC', 'Source Han Serif SC', 'Songti SC', 'SimSun', serif; font-size: 34px; fill: #302820; letter-spacing: 0.8px; }
+  </style>
+  <text x="108" y="120" class="body" xml:space="preserve">五、政治</text>
+<text x="108" y="176" class="body" xml:space="preserve">①安农马理论人，政治主观题基本上不用担心，就后期补一补“思修</text>
+<text x="108" y="232" class="body" xml:space="preserve">”就可以。</text>
+<text x="108" y="288" class="body" xml:space="preserve">②选择题推荐暑假开始可以一直刷“苍盾政治”这个小程序，有事没</text>
+<text x="108" y="344" class="body" xml:space="preserve">事一直刷。后期可以做一做徐套，米鹏，肖8肖4的选择！</text>
+<text x="108" y="400" class="body" xml:space="preserve">③主观题大家基本上都是肖4，这个不用说，如果你觉得小4出的晚</text>
+<text x="108" y="456" class="body" xml:space="preserve">了，可以看看“曲艺”的考研政治模版，比如她的“近代史”以及“</text>
+<text x="108" y="512" class="body" xml:space="preserve">思修”模版还挺好用的。</text>
+<text x="108" y="590" class="body" xml:space="preserve">六、答题模版</text>
+<text x="108" y="646" class="body" xml:space="preserve">因为是自己总结的！所以只放一点咯。有需要的可以找我私。</text>
+<text x="108" y="724" class="body" xml:space="preserve">小标题提炼法：</text>
+<text x="108" y="780" class="body" xml:space="preserve">1.A与B关系【两者】</text>
+<text x="108" y="836" class="body" xml:space="preserve">区别联系，矛盾运动规律，意义方法论</text>
+<text x="108" y="892" class="body" xml:space="preserve">（一）丰富内涵</text>
+<text x="108" y="948" class="body" xml:space="preserve">（二）辩证统一</text>
+<text x="108" y="1004" class="body" xml:space="preserve">（三）当代价值</text>
+<text x="108" y="1082" class="body" xml:space="preserve">2.A是B的C【三者】</text>
+<text x="108" y="1138" class="body" xml:space="preserve">（一）C是什么样的C</text>
+<text x="108" y="1194" class="body" xml:space="preserve">具体论述AB，点出C</text>
+<text x="108" y="1250" class="body" xml:space="preserve">（二）C是什么样的</text>
+<text x="108" y="1306" class="body" xml:space="preserve">（三）C是什么样的</text>
+<text x="108" y="1362" class="body" xml:space="preserve">【如中国特色社会主义是历史和人民的选择，小标题应该着眼于</text>
+<text x="108" y="1418" class="body" xml:space="preserve">（一）这是自觉理性的选择（C）</text>
+<text x="108" y="1474" class="body" xml:space="preserve">在论述历史和人民与中特社（A与B）</text>
+<text x="108" y="1552" class="body" xml:space="preserve">3.马原结合新思想论述模版【已经背过的论述题可不用，适用没背过</text>
+<text x="108" y="1608" class="body" xml:space="preserve">的】</text>
+<text x="108" y="1664" class="body" xml:space="preserve">【用马原———分析新思想】</text>
+<text x="108" y="1720" class="body" xml:space="preserve">引入：ABC（A介绍新理论，B介绍马原理，C介绍新理论对马原理的</text>
+<text x="108" y="1776" class="body" xml:space="preserve">创新）</text>
+</svg>
