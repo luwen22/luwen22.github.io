@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1242" height="2208" viewBox="0 0 1242 2208">
+  <defs>
+    <filter id="paperShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="14" stdDeviation="22" flood-color="#d9d0c4" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect width="100%" height="100%" fill="#f6f0e8"/>
+  <rect x="54" y="54" width="1134" height="2100" rx="46" fill="#fffdf8" filter="url(#paperShadow)"/>
+  <rect x="82" y="82" width="1078" height="2044" rx="34" fill="none" stroke="#eadfce" stroke-width="2"/>
+  <style>
+    .body { font-family: 'Noto Serif CJK SC', 'Source Han Serif SC', 'Songti SC', 'SimSun', serif; font-size: 34px; fill: #302820; letter-spacing: 0.8px; }
+  </style>
+  <text x="108" y="120" class="body" xml:space="preserve">八、心态与复盘</text>
+<text x="108" y="176" class="body" xml:space="preserve">考研考的就是心态，大家背了就忘很正常！每个人的遍数不一样也很</text>
+<text x="108" y="232" class="body" xml:space="preserve">正常！还有的人对于背的“轮”的定义也不一样。所以大家不要纠结</text>
+<text x="108" y="288" class="body" xml:space="preserve">于其他人背了多少多少“轮”。</text>
+<text x="108" y="344" class="body" xml:space="preserve">然后一定要学会复盘！日复盘，周复盘！</text>
+<text x="108" y="400" class="body" xml:space="preserve">￼</text>
+<text x="108" y="478" class="body" xml:space="preserve">其实这是我第一次写经验帖，可能谈不上什么宏大的经验，也不知道</text>
+<text x="108" y="534" class="body" xml:space="preserve">有多少人会看到，有没有人帮助，但是能写出了，就算是帮去年的我</text>
+<text x="108" y="590" class="body" xml:space="preserve">一把，那个在背不出书，纠结阅读正确率，担心考不上的我一把。还</text>
+<text x="108" y="646" class="body" xml:space="preserve">好结果是好的，大家一定要相信相信的力量！</text>
+<text x="108" y="724" class="body" xml:space="preserve">也欢迎大家评论或者私x来找我玩～期待认识学长学姐或学妹们！安</text>
+<text x="108" y="780" class="body" xml:space="preserve">农见咯！</text>
+</svg>
